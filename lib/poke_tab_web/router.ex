@@ -37,7 +37,11 @@ defmodule PokeTabWeb.Router do
     scope "/dev" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: PokeTabWeb.Telemetry
+      live_dashboard "/dashboard",
+        metrics: PokeTabWeb.Telemetry,
+        additional_pages: [
+          route_name: PokeTabWeb.LiveDashboard.Pokemon
+        ]
     end
   end
 end
