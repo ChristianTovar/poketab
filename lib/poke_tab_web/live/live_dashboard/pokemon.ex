@@ -19,19 +19,19 @@ defmodule PokeTabWeb.LiveDashboard.Pokemon do
     ~H"""
     <.row>
       <:col>
-        <.card title={"#{@pokemon.name} ##{@pokemon.id}"} hint="something">
+        <.card title={"#{@pokemon.name} ##{@pokemon.id}"} hint="Gotta catch 'em all!">
           <img src={@pokemon.image} alt={@pokemon.name} />
         </.card>
       </:col>
       <:col>
         <.row>
           <:col>
-            <.card title="Weight">
+            <.card title="Weight (hg)">
               <%= @pokemon.weight %>
             </.card>
           </:col>
           <:col>
-            <.card title="Height">
+            <.card title="Height (dm)">
               <%= @pokemon.height %>
             </.card>
           </:col>
